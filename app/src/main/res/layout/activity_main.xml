@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center|bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/id_play"
+            android:layout_width="82dp"
+            android:layout_height="76dp"
+            android:background="@drawable/play"
+            app:layout_constraintStart_toEndOf="@+id/id_qr"
+            android:layout_marginRight="50dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/id_stop"
+            android:layout_width="82dp"
+            android:layout_height="76dp"
+            android:background="@drawable/stop"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintStart_toEndOf="@+id/id_play"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/id_qr"
+            android:layout_width="82dp"
+            android:layout_height="76dp"
+            android:layout_toRightOf="@+id/id_stop"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/qr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
